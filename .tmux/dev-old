@@ -1,0 +1,27 @@
+selectp -t 0 
+splitw -h -p 50
+splitw -h -p 50
+splitw -h -p 50
+select-layout even-horizontal
+kill-pane -t 3
+kill-pane -t 2
+selectp -t 1
+resize-pane -L 10
+selectp -t 0
+splitw -v -p 50
+selectp -t 0
+splitw -v -p 75
+selectp -t 3
+splitw -v -p 50
+selectp -t 4
+resize-pane -D 20
+respawn-pane -k -t 0 "env startup_cmd='ssh -t aerith \"clear; tail -n 5 -f .weechat/logs/perl.highmon.weechatlog; bash -i\"' bash"
+selectp -t 0
+#splitw -v -p 50
+#respawn-pane -k -t 0 "env startup_cmd='ssh -t aerith \"tail -f .weechat/logs/perl.highmon.weechatlog\"'"
+# selectp -t 3
+# splitw -v -p 50
+# selectp -t 3
+# resize-pane -R 5
+# selectp -t 2
+# respawn-pane -k -t 4 "env startup_cmd='ssh -t aerith \"screen -r -d; bash -i\"' bash"

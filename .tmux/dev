@@ -1,0 +1,12 @@
+selectp -t 0 
+splitw -v -p 90
+selectp -t 1
+splitw -h -p 81
+selectp -t 2
+splitw -v -p 20
+selectp -t 0 
+selectp -t 0 
+splitw -h -p 50
+respawn-pane -k -t 0 "env startup_cmd='ssh -t aerith \"clear; tail -n 15 -f .weechat/logs/perl.highmon.weechatlog; bash -i\"' bash"
+respawn-pane -k -t 1 "env startup_cmd='ssh -t aerith \"clear; tail -n 15 -f .weechat/logs/perl.chanmon.weechatlog; bash -i\"' bash"
+
